@@ -241,8 +241,8 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, hsla(0, 0%, 100%, 0) 0%, #f8f8f800 100%);
-    opacity: 0.8;
+    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); 
+    opacity: 0.8;  
 }
 
 .text-color {
