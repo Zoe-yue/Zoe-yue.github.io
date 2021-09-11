@@ -4,13 +4,25 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2021/09/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
-      <url>/2021/09/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
+      <title>MySQL社区版安装教程</title>
+      <link href="/2021/09/11/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+      <url>/2021/09/11/MySQL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容</p><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="MySQL安装"><a href="#MySQL安装" class="headerlink" title="MySQL安装"></a>MySQL安装</h2><p>首先进入 <a href="https://dev.mysql.com/">MySQL官网</a> ，点击下载</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/1.png?raw=true"></p><p>选用社区版</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/2.png?raw=true"></p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/3.png?raw=true"></p><p>根据自己的系统选择对应的相应的版本，这里以Windows为例</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/4.png?raw=true"></p><p>选择离线安装包，等待下载完成</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/5.png?raw=true"></p><p>点击安装包，开始安装</p><blockquote><p>由于我已经安装，也不想卸载重来，所以就找了点图，会有点模糊，见谅</p></blockquote><p>在欢迎界面选择自定义安装</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/6.png?raw=true"></p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/7.png?raw=true"></p><p>再选择安装如下内容</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/8.png?raw=true"></p><p>点击安装</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/9.png?raw=true"></p><blockquote><p>这里可能会出现如下界面，这是你少了几个包，在选中任意一项，再点击Execute就行了</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/10.png?raw=true"></p><p>如果在路径处出现警告的话，不用管，这说明你以前可能安装过，继续装在这个路径下把他覆盖掉就行了</p></blockquote><p>安装完成点击下一步，进入配置界面</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/11.png?raw=true"></p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/12.png?raw=true"></p><p>开始配置</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/13.png?raw=true"></p><p>自己根据需求选择，然后点击下一步</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/14.png?raw=true"></p><p>设置超级管理员密码，点击下一步</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/15.png?raw=true"></p><p>下一步</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/16.png?raw=true"></p><p>下一步</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/17.png?raw=true"></p><p>下一步</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/18.png?raw=true"></p><p>最后一步，点击Execute，没有报错就安装完成了</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/19.png?raw=true"></p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/20.png?raw=true"></p><p>但是最后一步也可能出一些错误，我已知的错误及解决方法如下</p><ul><li><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/21.png?raw=true"></p><p>出现这种错误，需要退回到密码保护方式的选择界面，选择第二项</p></li><li><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/22.png?raw=true"></p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/23.png?raw=true"></p><p>出现这种错误就是windows的权限问题，但MySQL的安装是完成了的，只是服务无法启动，且密码为空</p><p>用win+R打开命令提示符窗口，输入<code>services.msc</code> 打开服务窗口，找到mysql80，再右键属性，点击登录，选择<code>本地系统账户</code> 点击应用，最后点击启动此服务</p><blockquote><p>以后MySQ的服务都是在此处启停，若以后出现数据库无法连接的情况，请首先检查MySQL的服务是否启动</p></blockquote></li></ul><p>至此，MySQ的安装就结束了</p><p>检测安装的成果</p><p>我们在桌面上，右键点击启动命令行窗口或者power shell</p><blockquote><p>若右键没有就shift+右键</p></blockquote><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/24.png?raw=true"></p><p>若这里报如下错误  -&gt;  无法识别这个命令，就是环境变量没有配置好的原因</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/25.png?raw=true"></p><p>进入<code>C:\Program Files\MySQL\MySQL Server 8.0\bin</code> 目录中，将此路径复制。在桌面找到此电脑右键属性，找到高级系统设置，点击环境变量，编辑用户变量的PATH，将路径添加进去，再重开命令行窗口就行了</p><blockquote><p>如果是win7就先输入英文的分号，再粘贴路径</p></blockquote><p>在命令行窗口中输入<code>mysql -u root -p</code> 回车，再输入密码，再回车，此时数据库已连接成功且进入交互式的环境，可以通过命令操作数据库了</p><p><img src="https://github.com/Zoe-yue/pic/blob/master/MySQL/26.png?raw=true"></p><blockquote><p>如果之前安装MySQL最后一步时服务启动失败的话，不要输入密码直接回车，就连接成功了，因为之前的密码设置也失败了</p></blockquote><p>要想重新设置密码，可输入命令<code>alter user 'root'@'localhost' identified by '新密码';</code> 回车就可以了</p>]]></content>
       
       
+      <categories>
+          
+          <category> MySQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 安装教程 </tag>
+            
+        </tags>
       
     </entry>
     
